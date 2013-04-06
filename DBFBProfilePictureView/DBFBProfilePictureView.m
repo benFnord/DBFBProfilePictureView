@@ -276,7 +276,7 @@ static BOOL cleanupScheduled = NO;
         pictureView.imageView.image = image;
         [pictureView ensureImageViewContentMode];
         if(pictureView.completionHandler != nil) {
-            pictureView.completionHandler(pictureView, nil);
+            pictureView.completionHandler(pictureView, image, nil);
         }
     }
 }
@@ -294,7 +294,7 @@ static BOOL cleanupScheduled = NO;
     
     for(DBFBProfilePictureView* pictureView in requestorsToUpdate) {
         if(pictureView.completionHandler != nil) {
-            pictureView.completionHandler(self, error);
+            pictureView.completionHandler(self, nil, error);
         }
     }
 }
@@ -376,7 +376,7 @@ static BOOL cleanupScheduled = NO;
             self.imageView.image = cachedImage;
             [self ensureImageViewContentMode];
             if(self.completionHandler != nil) {
-                self.completionHandler(self, nil);
+                self.completionHandler(self, nil, nil);
             }
         } else {
         

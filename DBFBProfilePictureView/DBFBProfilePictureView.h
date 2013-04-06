@@ -19,7 +19,7 @@
 
 @class DBFBProfilePictureView;
 typedef void (^DBFBProfilePictureViewStartHandler)(DBFBProfilePictureView *profilePictureView);
-typedef void (^DBFBProfilePictureViewHandler)(DBFBProfilePictureView *profilePictureView, NSError *error);
+typedef void (^DBFBProfilePictureViewHandler)(DBFBProfilePictureView *profilePictureView, UIImage* image, NSError *error);
 
 @interface DBFBProfilePictureView : UIView
 
@@ -41,6 +41,7 @@ typedef void (^DBFBProfilePictureViewHandler)(DBFBProfilePictureView *profilePic
 /**
  A block that gets called when the download of a profile picture completes.
  If an error occurs then it is returned here.
+ After a successful download, the image is handed over here.
  */
 @property (strong) DBFBProfilePictureViewHandler completionHandler;
 
