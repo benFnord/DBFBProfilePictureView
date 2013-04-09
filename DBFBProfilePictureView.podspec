@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'DBFBProfilePictureView'
   s.dependency 'AFNetworking', '>= 1.0'
-  s.dependency 'Facebook-iOS-SDK', '3.1.1'
+  s.dependency 'Facebook-iOS-SDK', '>=3.1.1'
   s.framework    = 'QuartzCore'
 end
